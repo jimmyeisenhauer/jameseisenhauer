@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0056)http://code.jameseisenhauer.com/html5demo/html5demo.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Jim's Fancy Test of HTML 5.0</title>
+    <script type="text/javascript">
+
+       
+
+        function init() {
+
+            setInterval(draw, 10);
+        }
+        
+        function draw() {
+
+            var canvas = document.getElementById('canvas1');
+            var ctx = canvas.getContext('2d');
+
+                //get colors for circle
+                var c1 = Math.floor(255 * Math.random())
+               
+                var c2 = Math.floor(255 * Math.random())
+               
+
+                var c3 = Math.floor(255 * Math.random())
+               
+
+                var fs = "rgba(" + c1 + "," + c2 + "," + c3 + ",0.5)";
+
+                var t = Math.floor((50 - 9) * Math.random()) + 10;
+
+                var wl = Math.floor((350 - 24) * Math.random()) + 25;
+                var hl = Math.floor((400 - 24) * Math.random()) + 25;
+
+                
+                //draw a circle
+                ctx.fillStyle = fs;
+                ctx.beginPath();
+                ctx.arc(wl,hl, t, 0, Math.PI * 2, true);
+                ctx.closePath();
+                ctx.fill();
+
+                
+
+
+
+
+
+
+        
+        }
+
+    </script>
+    <style type="text/css">
+        canvas { border: 1px solid black; 
+                 margin-left: auto; 
+                 margin-right: auto; 
+                 display:block; 
+                 background-color:#f6f6f6;
+                 border-radius: 15px; 
+                 
+            }
+        
+        header  {
+                	font-family: cursive;
+                	font-style: italic;
+                	font-variant: small-caps;
+                	font-weight: bold;
+                	font-size:  x-large;
+                	margin-left:auto;
+                	margin-right:auto;
+                	display:block;
+                	text-align: center;
+                	
+                	
+                }
+        
+        footer  {
+                	font-family: cursive;
+                	font-style: italic;
+                	font-variant: small-caps;
+                	font-weight: normal;
+                	font-size: small;
+                	margin-left:auto;
+                	margin-right:auto;
+                	display:block;
+                	text-align: center;
+                	
+                	
+                }
+                
+        #error  {
+                	font-family: cursive;
+                	font-style: italic;
+                	font-variant: small-caps;
+                	font-weight: bold;
+                	font-size:  xx-large;
+                	text-align: center;
+                	
+                	
+                }
+    </style>
+
+
+</head>
+<body onload="init();">
+
+<header>Cosmic Balls</header>
+
+<canvas id="canvas1" width="350" height="400">Canvas</canvas>
+
+
+
+<footer>html 5.0, &lt;canvas&gt;, css3, rounded corners</footer>
+
+
+
+</body></html>
